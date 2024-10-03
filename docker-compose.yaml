@@ -13,7 +13,7 @@ services:
       - MYSQL_USER=${MYSQL_USER}
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
     env_file:
-      - .env.example
+      - .env
     networks:
       - snipeit_network
     restart: always
@@ -35,7 +35,7 @@ services:
     networks:
       - snipeit_network
     env_file:
-      - .env.example
+      - .env
     restart: always
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8888"]
@@ -59,7 +59,7 @@ services:
     depends_on:
       - snipeit_mysql
     env_file:
-      - .env.example
+      - .env
     restart: always
 
 networks:
