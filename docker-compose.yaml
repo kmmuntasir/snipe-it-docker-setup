@@ -17,7 +17,7 @@ services:
     networks:
       - snipeit_network
     restart: always
-    healthcheck:
+    healthcheck: # ToDo: Healthcheck code is faulty, need to fix it
       test: ["CMD", "mysqladmin", "ping", "--silent"]
       interval: 5s
       retries: 3
